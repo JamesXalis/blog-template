@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Hello World",
+        "post_content": "This is the first post",
+        "user_id": 1
+    },
+    {
+        "title": "Hello World1",
+        "post_content": "This is the second post",
+        "user_id": 1
+    },
+    {
+        "title": "Hello World2",
+        "post_content": "This is the third post",
+        "user_id": 2
+    },
+    {
+        "title": "Hello World3",
+        "post_content": "This is the fourth post",
+        "user_id": 3
+    },
+    {
+        "title": "Hello World4",
+        "post_content": "This is the fifth post",
+        "user_id": 4
+    },
+    {
+        "title": "Hello World5",
+        "post_content": "This is the sixth post",
+        "user_id": 5
+    }
+]
