@@ -1,31 +1,31 @@
 [
     {
-        "comment_content": "This is the first post",
+        "comment_content": "This is the first comment",
         "user_id": 2,
         "post_id": 1
     },
     {
-        "comment_content": "This is the first post",
+        "comment_content": "This is the second comment",
         "user_id": 3,
         "post_id": 1
     },
     {
-        "comment_content": "This is the first post",
+        "comment_content": "This is the third comment",
         "user_id": 4,
         "post_id": 2
     },
     {
-        "comment_content": "This is the first post",
+        "comment_content": "This is the fourt comment",
         "user_id": 1,
         "post_id": 3
     },
     {
-        "comment_content": "This is the first post",
+        "comment_content": "This is the fith comment",
         "user_id": 5,
         "post_id": 4
     },
     {
-        "comment_content": "This is the first post",
+        "comment_content": "This is the sixth comment",
         "user_id": 4,
         "post_id": 5
     }

@@ -1,14 +1,29 @@
 const router = require("express").Router();
-const {Post, Comment} = require("../../../models")
+const {User, Post, Comment} = require("../../../models")
 
 // routes "/api/blogpost"
 router.get('/', async (req,res)=> {
     let postData = await Post.findAll({
-        include: [{model: Comment}]
+        include: [{
+            model: Comment,
+            include : [{model: User}]
+        }]
     });
     let posts = postData.map((post) => post.get({plain: true}));
     res.status(200).json(posts);
 })
+
+router.get('/:id', async (req,res)=> {
+    let postData = await Post.findOne({
+        include: [{
+            model: Comment,
+            include : [{model: User}]
+        }],
+        where: {
+            id: req.params.id
+        }
+    })
+});
 
 router.get('/:id', async (req,res)=> {
     let postData = await Post.findOne({
