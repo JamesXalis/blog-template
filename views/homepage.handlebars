@@ -1,0 +1,48 @@
+{{#each posts as |post|}}
+<div data-post="{{post.id}}" class="card text-center blogCard">
+    <div class="card-header blogHeader">
+        Posted By: {{post.user.username}}
+    </div>
+    <div class="card-body">
+        <h5 class="card-title blogTitle">{{post.title}}</h5>
+        <p class="card-text blogText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta aliquid voluptas
+            dolor corporis maiores suscipit tempora possimus consequuntur adipisci, cupiditate nesciunt veritatis aut
+            laudantium, accusantium temporibus eaque sed perspiciatis veniam! Lorem ipsum, dolor sit amet consectetur
+            adipisicing elit. In omnis adipisci blanditiis, voluptate, minus optio soluta numquam amet fugit vitae nemo
+            tenetur reprehenderit nostrum? Ullam perferendis repudiandae recusandae itaque ab? Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Esse earum sapiente explicabo, labore ut, repellat cumque cum deserunt
+            suscipit magni aspernatur consequuntur quae mollitia beatae ad fugit facere vero quos? {{post.post_content}}
+        </p>
+    </div>
+    <div class="card-footer text-muted blogHeader">
+        <p id="blogFooterText">Posted at: {{post.createdAt}}</p>
+    </div>
+</div>
+{{/each}}
+
+<div class="card text-center blogCard">
+    <div class="card-header blogHeader">
+        <p id="blogFooterText">Write a Post</p>
+    </div>
+    <div class="card-body postForm">
+        <div class="mb-3">
+            <label class="form-label">Title</label>
+            <input class="form-control" id="newPostTitle">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Body</label>
+            <input class="form-control" id="newPostBody">
+        </div>
+        <button type="submit" class="btn btn-primary" id="postSubmit">Submit</button>
+    </div>
+    <div class="card-footer text-muted blogHeader">
+        <p id="blogFooterText"></p>
+    </div>
+</div>
+
+{{#each posts as |post|}}
+<div data-post="{{post.id}}" class="card text-center blogCard">
+<div data-post= {{post.id}} class="card text-center blogCard">
+    <div class="card-header blogHeader">
+        Posted By: {{post.user.username}}
+    </div>
