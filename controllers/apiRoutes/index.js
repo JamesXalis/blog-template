@@ -4,7 +4,6 @@ const userRoutes = require("./userRoutes");
 const blogPostRoutes = require("./blogPostRoutes")
 const commentRoutes = require("./commentRoutes");
 
-// router handlers for "/api" endpoints
 router.use("/user", userRoutes);
 router.use("/blogpost", blogPostRoutes);
 router.use("/comment", commentRoutes);
