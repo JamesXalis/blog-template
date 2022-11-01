@@ -4,7 +4,6 @@ if (document.querySelector('.blogCard')) {
     const formSubmitHandler = async ()=> {
         let title = document.querySelector("#newPostTitle").value.trim()
         let post_content = document.querySelector("#newPostBody").value.trim()
-        console.log("button works")
 
         if (title && post_content) {
             const response = await fetch('/api/blogpost/', {
@@ -27,8 +26,6 @@ if (document.querySelectorAll(".postCommentSubmit")) {
     const commentSubmitHandler = async (e)=> {
         let comment_content = e.target.previousElementSibling.lastElementChild.value;
         let post_id = e.target.parentNode.parentNode.getAttribute("data-post");
-        console.log(comment_content);
-        console.log(post_id);
 
 
         if (comment_content) {
