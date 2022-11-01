@@ -78,11 +78,12 @@ router.post('/login', async (req,res) => {
     });
     if (!userData) return res.status(404).json("Invalid Login Credentials");
 
-    if (! userData.checkPassword(req.body.password)) return res.status(404).json("Invalid Login Credentials");
+    let validity = userData.checkPassword(req.body.password);
+    if (!validity) return res.status(404).json("Invalid Login Credentials!");
 
     let user = userData.get({plain: true});
     req.session.save(() => {
-        req.session.id = user.id;
+        req.session.user_id = user.id;
         req.session.username = user.username;
         req.session.loggedIn = true;
 

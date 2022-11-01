@@ -9,6 +9,7 @@ router.get("/", async (req,res) => {
         }, {model: User}]
     });
     let posts = postData.map((post) => post.get({plain: true}));
+    (req.session.loggedIn) ? posts.logged_in = true : posts.logged_in = false;
     res.render("homepage", {posts, loggedIn: req.session.loggedIn, username: req.session.username});
 })
 
