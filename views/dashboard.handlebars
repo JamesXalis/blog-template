@@ -10,7 +10,7 @@
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Body</label>
-            <input class="form-control" id="newPostBody">
+            <textarea class="form-control" id="newPostBody" rows="7"></textarea>
         </div>
         <button type="submit" class="btn btn-primary customBTN" id="postSubmit">Post</button>
     </div>
@@ -29,7 +29,7 @@
         <h5 class="card-title blogTitle">{{post.title}}</h5>
         <p class="card-text blogText">{{post.post_content}}</p>
     </div>
-        <div class="card-body postForm">
+    <div class="card-body postForm">
         <button type="submit" class="btn btn-primary customBTN editButton">Edit</button>
     </div>
     {{#if post.comments}}
